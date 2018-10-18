@@ -1,0 +1,8 @@
+
+<%= will_paginate %>
+<% @posts.each do |post| %>
+<div>
+  <h2 class="warning"><%= link_to post.title, post  %></h2>
+</div>
+<% end %>
+<%= will_paginate %>

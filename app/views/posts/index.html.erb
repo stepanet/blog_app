@@ -1,0 +1,15 @@
+<div class="search-post">
+    <%= text_field_tag :post_name, params[:post_name], class: "form-control" %>
+    <%= button_tag "Поиск", class: "btn btn-lg btn-info"  %>
+</div>
+<div class="search-post">
+    <%= form_for :post_name, url: posts_path, method: :get do %> 
+    	<%= text_field_tag :post_name, params[:post_name], class: "form-control" %>
+    	<%= submit_tag "Поиск Форма",  class: "btn btn-lg btn-info"%>
+
+    <% end %>
+</div>
+<h1 class = "text-success">Новости</h1>
+<div class='all-posts'>
+    <%= render 'index' %>
+</div>
